@@ -17,18 +17,39 @@ for(let i = 2; i <= 10; i++){
 // console.log(fibo)
 
 
-
+/* 
 function fibonacci(number){
-    
-let fibo = [0, 1]
+    let fibo = [0, 1]
     for(let i = 2; i <= number; i++){
         fibo[i] = fibo[i - 1] + fibo[i - 2];
     }
     return fibo;
 }
 
-const fiboCount = fibonacci(15);
+const fiboCount = fibonacci([412]);
 console.log(fiboCount)
+ */
+
+
+
+
+function fibonacci(number){
+    if(typeof number != 'number'){
+        return "Please give a number";
+    }
+    if(number < 2){
+        return "Please enter a positive number greater than 1"
+    }
+    let fibo = [0, 1]
+    for(let i = 2; i <= number; i++){
+        fibo[i] = fibo[i - 1] + fibo[i - 2];
+    }
+    return fibo;
+}
+
+const fiboCount = fibonacci(20);
+console.log(fiboCount)
+
 
 
 /* 
